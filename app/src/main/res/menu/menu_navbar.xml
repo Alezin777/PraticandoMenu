@@ -12,11 +12,9 @@
     <item
     android:id="@+id/mNewspaper"
     android:title="Newspaper"
-    android:icon="@drawable/baseline_newspaper"
-    />
+    android:icon="@drawable/baseline_newspaper"/>
     <item
     android:id="@+id/mPhone"
     android:title="Phone"
     android:icon="@drawable/baseline_phone"/>
-
 </menu>
