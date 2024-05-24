@@ -2,6 +2,7 @@ package br.com.etecia.myapp;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -33,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
         //apresentando o xml para o java
         bottomNavView = findViewById(R.id.bottomNavView);
         TopBar = findViewById(R.id.TopBar);
+        TopBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        "Voltando",Toast.LENGTH_SHORT).show();
+            }
+        });
+
         //criando evento de click nos item de menu
         TopBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
