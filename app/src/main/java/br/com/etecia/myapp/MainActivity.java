@@ -15,11 +15,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavView;
     MaterialToolbar TopBar;
+    FloatingActionButton idFAB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         //apresentando o xml para o java
+        idFAB = findViewById(R.id.idFAB);
         bottomNavView = findViewById(R.id.bottomNavView);
         TopBar = findViewById(R.id.TopBar);
+        idFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        "Cliquei no FAB",Toast.LENGTH_SHORT).show();
+            }
+        });
         TopBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
