@@ -32,30 +32,28 @@ public class MainActivity extends AppCompatActivity {
         bottomNavView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                if (menuItem.getItemId() == R.id.mNews) {
+                    Toast.makeText(getApplicationContext(),
+                            "Cliquei em News",Toast.LENGTH_SHORT).show();
 
-                switch (menuItem.getItemId()){
-                    case R.id.mNews:
-                        Toast.makeText(getApplicationContext(),
-                                "Cliquei em News",Toast.LENGTH_SHORT).show();
-                        ;
-                    break;case R.id.mAdd:
-                        Toast.makeText(getApplicationContext(),
-                                "Cliquei em Add",Toast.LENGTH_SHORT).show();
-                        ;
-                    break;case R.id.mNewspaper:
-                        Toast.makeText(getApplicationContext(),
-                                "Cliquei em Newspaper",Toast.LENGTH_SHORT).show();
-                        ;
-                    break;case R.id.mPhone:
-                        Toast.makeText(getApplicationContext(),
-                                "Cliquei em Phone",Toast.LENGTH_SHORT).show();
-                        ;
-                    break;
+                }if (menuItem.getItemId() == R.id.mAdd) {
+                    Toast.makeText(getApplicationContext(),
+                            "Cliquei em Add",Toast.LENGTH_SHORT).show();
+
+                }if (menuItem.getItemId() == R.id.mNewspaper) {
+                    Toast.makeText(getApplicationContext(),
+                            "Cliquei em Newspaper",Toast.LENGTH_SHORT).show();
+
+                }if (menuItem.getItemId() == R.id.mPhone) {
+                    Toast.makeText(getApplicationContext(),
+                            "Cliquei em Phone",Toast.LENGTH_SHORT).show();
 
                 }
 
                 return false;
             }
+
+
         });
     }
 }
